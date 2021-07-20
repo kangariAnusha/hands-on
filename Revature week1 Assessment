@@ -1,0 +1,31 @@
+package javaweek1assignment;
+import java.util.Scanner;
+
+public class DisplayNoOfEggs {
+	int N=0,gross=0,dozens=0,rem=0;
+	int bal;
+	
+	public void noOfEggs() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of eggs in hand");
+		N=sc.nextInt();
+		gross = N/144;
+		bal = N%144;
+		
+		dozens=bal/12;
+		rem=bal%12;
+		
+	System.out.println("you have"+ gross + "gross"+ ","+ dozens + "dozens" + rem + "eggs");
+	System.out.println(gross);
+	System.out.println(dozens);
+	System.out.println(rem);
+		
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+    DisplayNoOfEggs d = new DisplayNoOfEggs();
+    d.noOfEggs();
+	}
+
+}
