@@ -1,0 +1,54 @@
+package javaweek1assignment;
+import java.util.Scanner;
+
+public class TaxesSum {
+	double income=0;
+    String gender;
+    
+    public void calculatingTax() {
+	Scanner sc = new Scanner(System.in);
+	
+		
+		System.out.println("Enter the gender: G for general /W for women");
+		gender = sc.next();
+		System.out.println("Enter the income");
+		income = sc.nextInt();
+		
+		if(gender.equals("G")) {
+			if (income>0&&income<=180000) {
+				System.out.println("No tax for your income");
+			}
+			else if(income>=18001&&income<=500000) {
+				 income = 0.1*income;
+				System.out.println(income);
+			}
+			else if(income>=500001&&income<=800000) {
+				income = 0.2*income;
+				System.out.println(income);
+			}
+			else {
+				income = 0.3*income;
+			
+				System.out.println(income);
+			}
+			}
+		
+		if(gender.equals("W")) {
+			if (income>0&&income<=190000) {
+				System.out.println("No tax for your income");
+			}
+			else if(income>=19001&&income<=500000) {
+				 income = 0.1*income;
+				System.out.println(income);
+			}
+			else if(income>=500001&&income<=800000) {
+				income = 0.2*income;
+				System.out.println(income);
+			}
+			else {
+				income = 0.3*income;
+			
+				System.out.println(income);
+			}
+			}
+		}
